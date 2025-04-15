@@ -4,7 +4,7 @@ export async function clientLoader({ params }: Route.LoaderArgs) {
   const countryName = params.countryName;
 
   const res = await fetch(
-    `https://restcountries.com/v3.1/name/${countryName}?fullText=true`
+    `https://restcountries.com/v3.1/name/${countryName}?fullText=true`,
   );
   const data = await res.json();
   return data;
